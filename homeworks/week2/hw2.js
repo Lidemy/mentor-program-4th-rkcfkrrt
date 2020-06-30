@@ -1,7 +1,5 @@
-function capitalize(str) {
-    var a =str.charAt(0)
-    var b =str.replace(a, a.toUpperCase()) 
-    return b
-  }
+function capitalize(str) {    
+  return str.replace(str[0], str[0].toUpperCase());
+}
   
-  console.log(capitalize('hello'));
+console.log(capitalize('yfukykgh;oihp'));
