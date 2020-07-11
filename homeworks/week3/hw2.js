@@ -45,25 +45,3 @@ rl.on('line', (line) => {
 rl.on('close', () => {
   solve(lines);
 });
-
-/*
-function flower(a) {
-  const str = a.toString();
-  let sum = 0;
-  for (let i = 0; i <= str.length - 1; i += 0) {
-    sum += str[i] ** str.length;
-  }
-  return sum;
-}
-
-function solve(line) {
-  const temp = line[0].split(' ');
-  const n = Number(temp[0]);
-  const m = Number(temp[1]);
-  for (let i = n; i <= m; i += 1) {
-    if (i === flower(i)) {
-      console.log(i);
-    }
-  }
-}
- */
