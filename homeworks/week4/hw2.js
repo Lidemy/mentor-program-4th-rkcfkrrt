@@ -4,10 +4,11 @@ const request = require('request');
 const process = require('process');
 
 const args = process.argv;
+const api = 'https://lidemy-book-store.herokuapp.com';
 
 function listBooks() {
   request(
-    `https://lidemy-book-store.herokuapp.com/books?_limit=20`,
+    `${api}/books?_limit=20`,
     (error, response, body) => {
       if (error) {
         return error;
@@ -22,7 +23,7 @@ function listBooks() {
 
 function readBooks(id) {
   request(
-    `https://lidemy-book-store.herokuapp.com/books/${id}`,
+    `${api}/books/${id}`,
     (error, response, body) => {
       if (error) {
         return console.log('error:', error);
@@ -35,7 +36,7 @@ function readBooks(id) {
 
 function deleteBooks(id) {
   request.delete(
-    `https://lidemy-book-store.herokuapp.com/books/${id}`,
+    `${api}/books/${id}`,
     (error, response, body) => {
       if (error) {
         return console.log('error:', error);
@@ -47,7 +48,7 @@ function deleteBooks(id) {
 
 function createBooks(name) {
   request.post({
-    url: `https://lidemy-book-store.herokuapp.com/books/`,
+    url: `${api}/books/`,
     form: { name },
   },
   (error) => {
@@ -60,7 +61,7 @@ function createBooks(name) {
 
 function updateBooks(id, name) {
   request.patch({
-    url: `https://lidemy-book-store.herokuapp.com/books/${id}`,
+    url: `${api}/books/${id}`,
     form: { name },
   },
   (error) => {

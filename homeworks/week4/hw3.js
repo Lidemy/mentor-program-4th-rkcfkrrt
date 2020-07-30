@@ -3,9 +3,10 @@ const process = require('process');
 
 const args = process.argv;
 const name = args[2];
+const api = 'https://restcountries.eu/rest/v2';
 
 request(
-  `https://restcountries.eu/rest/v2/name/${name}`,
+  `${api}/name/${name}`,
   // eslint-disable-next-line
   (error, response, body) => {
     if (error) {
@@ -19,7 +20,7 @@ request(
       return console.log('請輸入欲查詢之英文國名');
     }
     for (let i = 0; i < data.length; i += 1) {
-      console.log('============');
+      console.log('==============');
       console.log(`國家: ${data[i].name}`);
       console.log(`首都: ${data[i].capital}`);
       console.log(`貨幣: ${data[i].currencies[0].code}`);
