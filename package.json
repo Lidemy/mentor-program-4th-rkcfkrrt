@@ -27,11 +27,15 @@
     "url": "https://github.com/Lidemy/mentor-program-4th/issues"
   },
   "homepage": "https://github.com/Lidemy/mentor-program-4th#readme",
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.88.2"
+  },
   "devDependencies": {
+    "@typescript-eslint/parser": "^3.7.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "husky": "^1.3.1",
