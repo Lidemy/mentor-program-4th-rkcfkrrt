@@ -13,6 +13,7 @@ Database：用於儲存、計算和提供資訊與數據。當 Server 收到 req
 後端使用的技術有很多種，常見的有 JavaScript、PHP、Python、Ruby on Rails 等，通常學習一語言會搭配相關的資料庫來使用。
 
 
+<<<<<<< HEAD
 ## 假設我今天去 Google 首頁搜尋框打上：JavaScri[t 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
 使用者在 Google 瀏覽器送出的那一瞬間，作業系統會透過網路卡把想查詢的關鍵字 "JavaScri[t" 這個 request 送到 Google 的 Server，接著 Server 會去向 Database 查詢，在取得所需資料後，Server 會把結果回傳給使用者的網路卡，即提供 response，網路卡解析後會傳給作業系統解析，最後才呈現在瀏覽器上呈現出 response 給使用者看。
 
@@ -20,6 +21,9 @@ Database：用於儲存、計算和提供資訊與數據。當 Server 收到 req
 ## 請列舉出 3 個「課程沒有提到」的 command line 指令並且說明功用
 1. `color`：可以用來變更 cmd 的顯示顏色。
     使用方法為 `color` 加上一位的背景顏色（0-9）與一位前景顏色（A-F）；若直接輸入 `color` 則為還原預設顏色。
+=======
+## 假設我今天去 Google 首頁搜尋框打上：JavaScript 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
+>>>>>>> b3fc530379d84ecd7f1fa4620f30d45967043dfa
 
 2. `FC`:用來比較兩個或兩組檔案，並顯示其中不同處。
     使用方法為 `FC filename1 filename2`，並且可以依需求加上 Options，像是`FC /A` 是針對每組不同之處，只要顯示其中的第一行和最後一行。
