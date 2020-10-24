@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FAQ - 常見問題</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <style>
+      
+      .navbar {
+        height: 100%;
+        box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+        padding: 0px 24px;
+      }
+      
+      .wrapper {
+        max-width: 1280PX;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(25%);
+        padding-bottom: 30px;
+        margin: 0 auto;
+      }
+
+      .nav__title {
+        font-size: 36px;
+        color: #489846;
+      }
+
+      .nav__menu {
+        display: flex;
+        list-style: none;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        color: #010101;
+      }
+
+      .nav__menu a {
+        text-decoration: none;
+        padding: 12px 24px;
+        margin-left: 12px;
+        color: #000;
+      }
+
+      .nav__menu li:hover a {
+        background-color: #ff7286;
+        border-radius: 8px;
+        color: white;
+      }
+
+      .nav__active a {
+        width: 120px;
+        height: 44px;
+        text-decoration: none;
+        background-color: #ff7286;
+        border-radius: 8px;
+        color: white;
+      }
+
+      .list {
+        width: 816px;
+        margin: 0 auto 40px;
+      }
+
+      .list__title {
+        width: 278px;
+        font-size: 36px;
+        text-align: center;
+        border-left: solid 15px #a3dea2;
+        margin: 75px auto 45px;
+      }
+
+      .list__item {
+        height: auto;
+        width: 810px;
+        border-bottom: #a6e2c0 1px solid;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .list__num {
+        font-size: 24px;
+        color: #70b282;
+        margin-right: 16px;
+      }
+
+      .list__ans {
+        padding-top: 24px;
+        display: none;
+        line-height: 20px;
+      }
+
+      .list__question {
+        cursor: pointer;
+      }
+
+      .list__question,
+      .list__ans {
+        font-size: 16px;
+      }
+
+      .show {
+        display: block;
+      }
+
+      footer {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .footer__top {
+        display: flex;
+        justify-content: space-between;
+        background-color: #e8efee;
+        height: 186px;
+        width: 100%;
+      }
+
+      .footer__info{
+        font-size: 14px;
+        line-height: 29px;
+        color: #484848;
+        position: relative;    
+        margin: 48px;
+
+      }
+
+      .footer__site {
+        position: relative;    
+        margin: 48px;
+        text-align: right;
+      }
+
+      .footer__social {
+        font-size: 14px;
+        color: #484848;
+      }
+      
+      .footer__title {
+        color: #489846;
+        font-size: 36px;
+        line-height: 59px;
+      }
+
+      .footer__bottom {
+        height: 48px;
+        width: auto;
+        background-color: #35564b;
+        color: white;
+        text-align: center;
+        line-height: 48px;
+      }
+      
+      /* RWD 還沒有修好，請不要理它 XDD */
+      @media(max-width: 768px) {
+        .wrapper {
+          height: 150px;
+          width: 100%;
+
+          flex-direction: column;
+          justify-content: center;
+          padding: 0px;
+        }
+
+        .nav__title{
+          margin: auto;
+        }
+
+        .nav__menu {
+          flex: 1;
+          margin: 12px auto;
+          display: flex;
+          width: 100%;          
+        }
+
+        .nav__menu a {
+          margin: 0;
+          text-align: center;
+        }
+
+        .list {
+          width: 100%;
+          text-align: center;
+        }
+
+        .list__title {
+          
+          display: inline-block;
+          margin: 15px auto 0px auto;
+        }
+
+        .list__item {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          padding: auto;         
+          text-align: center;
+        }
+
+        .list__ans {
+          line-height: 1.2rem;
+          padding: 12px;
+        }
+
+        .footer__top {
+          flex-direction: column-reverse;
+          margin: 0;
+        }
+
+        .footer__info {          
+          margin-bottom: 10px;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="nav__title">Just A Bite!</div>
+        <ul class="nav__menu">
+          <li class="nav__active"><a href="#">抽個大獎</a></li>
+          <li><a href="#">我要點餐</a></li>
+          <li><a href="#">查詢訂單</a></li>
+          <li><a href="#">常見問題</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="list">
+      <div class="list__title">FAQ - 常見問題</div>
+      <div class="list__item">
+        <span class="list__num">Q1:</span>
+        <span class="list__question">如何辦理退貨？</span>
+        <div class="list__ans">請使用線上退貨申請，並請您將商品放回原包裝袋或原紙箱(或乾淨包材)內，連同商品清單、三聯式紙本發票（若尚未收到紙本發票，或申請電子發票者，則無需準備紙本統一發票），隨同退貨商品一起退回。</div>
+      </div>
+      <div class="list__item">
+        <span class="list__num">Q2:</span>
+        <span class="list__question">目前提供哪些付款方式？</span>
+        <div class="list__ans">超商現金付款、信用卡(可接受VISA、Master Card、JCB與美國運通卡AE)、LINE Pay、街口支付、ATM轉帳等多種選擇。 </div>
+      </div>
+      <div class="list__item">
+        <span class="list__num">Q3:</span>
+        <span class="list__question">線上刷卡如何操作呢？</span>
+        <div class="list__ans">訂單資料金額確認後，按下【確認】後會直接帶到銀行介面執行刷卡動作。採Visa驗證、3D SECURE等安全機制，付款過程全程使用SSL256位元加密。</div>
+      </div>
+      <div class="list__item">  
+        <span class="list__num">Q4:</span>
+        <span class="list__question">如何查詢目前訂單的處理情況？</span>
+        <div class="list__ans">請至本站「顧客中心」的「查訂單」功能，查詢訂單處理進度。</div>
+      </div>
+      <div class="list__item">
+        <span class="list__num">Q5:</span>
+        <span class="list__question">訂單成立後，是否可以取消或是更改訂單數量及商品？</span>
+        <div class="list__ans">您可以至「會員中心」的「訂單修改/取消」取消您的整筆訂單後，再重新下單。或您可來信至【客服信箱】，由客服人員為您取消訂單後，再重新訂購。 </div>
+      </div>
+      <div class="list__item">
+        <span class="list__num">Q6:</span>
+        <span class="list__question">我想購買的商品已經缺貨，什麼時候會進貨呢？</span>
+        <div class="list__ans">如購物車按鈕顯示「貨到通知我」，請點選該按鈕並填寫聯絡資訊(E-mail或手機號碼)，商品到貨後系統會依登記順序及到貨數量陸續發送E-mail或簡訊通知。</div>
+      </div>
+
+    </section>
+    <footer>
+      <div class="footer__top">
+        <div class="footer__info">
+          <div>餐館地址: 天上地下天堂路三分之一里六段520號</div>
+          <div>訂位專線：02-1314-5566</div>
+          <div>營業時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</div>
+          <div>email：service@justabite.com.tw</div>
+        </div>
+        <div class="footer__site">
+          <div class="footer__title">Just A Bite!</div>
+          <div class="footer__social">Facebook / Instagram / Youtube</div>
+        </div>
+      </div>     
+      <div class="footer__bottom">
+        Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有
+      </div>
+    </footer>
+
+    <script>
+      const element = document.querySelectorAll(".list__item")
+      const ans = document.querySelectorAll(".list__ans")
+      for (let i = 0; i < element.length; i += 1) {
+        element[i].addEventListener('click', function() {
+        ans[i].classList.toggle('show');
+        });
+      }
+    </script>
+  </body>
+</html>

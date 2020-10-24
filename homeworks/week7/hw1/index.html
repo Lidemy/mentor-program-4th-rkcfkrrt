@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>新拖延運動報名表單</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <style>
+    body {
+      background-color: var(--white);
+    }
+
+    form {
+      background-color: #fff;
+      width: 645px;
+      height: auto;
+      box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+      margin: 121px auto 66px auto;
+    }
+
+    .line {
+      border-top: solid 8px #fad312;
+    }
+
+    .form__text {
+      padding-left: 40px;
+    }
+
+    .form__title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 54px;
+      margin-bottom: 35px;
+    }
+
+    .info {
+      font-size: 14px;
+      margin-bottom: 11px;
+    }
+
+    .required {
+      font-size: 16px;
+      color: #e74149;
+      margin-top: 20px;
+      margin-bottom: 45px;
+    }
+
+    .user__data {
+      font-size: 20px;
+      margin-top: 49px;
+    }
+
+    .star {
+      font-size: 20px;
+      color: #e74149;
+    }
+
+    input {
+      margin-top: 1rem;
+      font-size: 16px;     
+    }
+
+    input[type='radio'] + label {
+      font-size: 14px;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'] {
+      width:287px;
+    }
+
+    .user__data .tips {
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    input[type='submit'] {      
+      width: 92px;
+      height: 40px;
+      margin-top: 55px;
+      background-color: #fad312;
+      border: #fad312;
+      border-radius: 3px;
+      font-size: 15px;
+    }
+
+    .submit .tips {
+      font-size: 14px;
+      margin-top: 21px;
+      padding-bottom: 35px;
+    }
+
+    .error,
+    .radioError {
+      visibility: hidden;
+      font-size: 16px;
+      margin-top: 4px;
+      color: red;
+    }
+
+    .footer {
+      height: 60px;
+      width: auto;
+      background-color: rgb(0, 0, 0);
+    }
+
+    .footer__bottom {
+      font-size: 13px;
+      color: #999999;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    @media(max-width: 768px) {
+      form {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        width: 95%;
+        height: auto;
+      }
+
+      .form__text {
+        padding: 20px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form class='form'>
+    <div class='line'></div>
+    <div class='form__text'>
+      <div class='form__title'>新拖延運動報名表單</div>
+      <div>
+        <div class='info'>活動日期：2020/12/10 ~ 2020/12/11</div>
+        <div class='info'>活動地點：台北市大安區新生南路二段1號</div>
+      </div>
+      <div class='required'>*必填</div>
+      <div class='user__data'>
+        <div>暱稱 <span class='star'>*</span></div>
+        <input type='text' placeholder='您的回答' name='暱稱' class='data'/>
+        <div class='error'>必填</div>
+      </div>
+      <div class='user__data'>    
+        <div>電子郵件 <span class='star'>*</span></div>
+        <input type='email' placeholder='您的電子郵件' name='電子郵件' class='data'/>
+        <div class='error'>必填</div>
+      </div>
+      <div class='user__data'>   
+        <div>手機號碼 <span class='star'>*</span></div>
+        <input type='tel' placeholder='您的手機號碼' name='手機號碼' class='data'/>
+        <div class='error'>必填</div>
+      </div>
+      <div class='user__data'>
+        <div>報名類型 <span class='star'>*</span></div>
+        <div><input type='radio' name='type' id='bed' value='躺在床上用想像力實作' /><label for='bed'> 躺在床上用想像力實作</label></div>
+        <div><input type='radio' name='type' id='ground' value='趴在地上滑手機找現成的' /><label for='ground'> 趴在地上滑手機找現成的</label></div>
+        <div class='radioError'>必填</div>
+      </div>
+      <div class='user__data'>
+        <div>怎麼知道這個活動的？ <span class='star'>*</span></div>
+        <input type='text' placeholder='您的回答' name='怎麼知道這個活動的？' class='data'/>
+        <div class='error'>必填</div>
+      </div>
+      <div class='user__data'>
+        <div>其他</div>
+        <div class='tips'>對活動的一些建議</div>
+        <input type='text' placeholder='您的回答' name='對活動的一些建議' />    
+      </div>
+      <div class='submit'>
+        <div><input type='submit' /></div>
+        <div class='tips'>請勿透過表單送出您的密碼。</div>
+      </div>
+    </div>
+  </form>
+  <div class='footer'>
+    <div class='footer__bottom'>
+      © 2020 © Copyright. All rights Reserved.
+    </div>
+  </div>
+
+  <script>
+    document
+      .querySelector('form')
+      .addEventListener('submit', (e) => {
+        e.preventDefault();
+        let output = '';
+        //測試非 radio 的欄位
+        let hasEmpty = false;
+        const inputData = document.querySelectorAll('.data');
+        const error = document.querySelectorAll('.error');
+        for (let i = 0; i < inputData.length; i += 1) {
+          if (inputData[i].value === '') {
+            error[i].setAttribute('style', 'visibility: visible');
+            hasEmpty = true;
+          } else {
+            error[i].setAttribute('style', 'visibility: hidden');
+            output += `${inputData[i].name}：${inputData[i].value}\n` ;
+          }
+        }
+
+        //測試 radio 的欄位
+        let empty = false;
+        const radio = document.querySelectorAll("input[type='radio']");
+        const errorRadio = document.querySelector('.radioError');
+        for (let j = 0; j < radio.length; j += 1) {
+          if (radio[j].checked) {         
+            errorRadio.setAttribute('style', 'visibility: hidden');
+            output += `報名類型：${radio[j].value}\n`;
+            break;
+          } else {
+            errorRadio.setAttribute('style', 'visibility: visible');
+            empty = true;
+          }
+        }
+
+        if (hasEmpty && empty) {
+          alert('請完整填寫必填欄位');
+        } else {
+          alert('您填寫的資料為：' + output);
+        }
+    });
+  </script>
+</body>
+</html>

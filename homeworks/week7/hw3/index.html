@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <style>
+			body { 
+				margin:0;
+			}
+			
+			main {
+				max-width: 500px;
+				display: inline-block;
+				width: 100%;
+				height: 500px;
+				background-color: #faeceb;
+				padding: 0 36px 30px;
+			}
+
+			.title {
+				color: #545871;
+				margin: 30px auto;
+			}
+
+			.list__input {
+				width: 387px;
+				height: 25px;
+				margin: 10px auto;
+			}
+
+			input[type='checkbox'] {
+				margin-right: 12px;
+			}
+
+			input[type="checkbox"]:checked ~ span {
+        color: grey;
+        text-decoration: line-through;
+      }
+
+			.frame {
+				height: 300px;
+				padding: 10px;
+				overflow:scroll;
+				overflow-X:hidden;
+			}
+
+			li {
+				display: flex;
+				color: #545871;
+				margin-top: 10px;
+				justify-content: space-between;
+				padding: 1px;
+			}
+
+			li:hover {
+				background: #F1CFCD;
+			}
+
+			.delete {
+				cursor: pointer;
+				margin-left: 10px;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<main>
+			<h1 class="title">Todo List</h1>
+			<input class="list__input" type="text" placeholder="Add something to do here ?ヽ(✿ﾟ▽ﾟ)ノ">			
+			<div>
+				<ul class="frame">
+					<li>
+						<label><input type="checkbox" title="完成！" /><span>勾選表示完成，點擊叉叉可刪除項目！</span></label>
+						<span class="delete" title="刪除！">✘</span>
+					</li>
+					<li>
+						<label><input type="checkbox" title="完成！" checked/><span>我是範例！</span></label>
+						<span class="delete" title="刪除！">✘</span>
+					</li>
+				</ul>		
+			</div>
+		</main>
+
+		<script>
+			//刪除用
+			function del(e) {
+				for (let i = 0; i < document.querySelectorAll(".delete").length; i += 1) {
+					document.querySelectorAll(".delete")[i].addEventListener("click", function (e) {
+						const parent = e.target.parentNode;
+						parent.remove();						
+					})
+				};
+			};
+
+			del();
+			
+			document
+			.querySelector(".list__input")
+			.addEventListener ("keydown", function (e) {				
+				if ( e.keyCode === 13 ) {
+					//新增項目
+					const content = document.querySelector(".list__input").value;
+					const newLi = document.createElement('li');
+					const newOne = `
+						<label><input type="checkbox" title="完成！" /><span>${escapeHtml(content)}</span></label>
+						<span class="delete" title="刪除！">✘</span>
+					`;					
+					if (content === '') {
+						alert('請輸入內容');
+					} else {
+						newLi.innerHTML = newOne;
+						document.querySelector(".frame").appendChild(newLi);
+					}
+					document.querySelector(".list__input").value = "";
+				};
+			//刪除項目
+			del(e);
+		});
+
+		function escapeHtml(unsafe) {
+			return unsafe
+				.replace(/&/g, "&amp;")
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;")
+				.replace(/"/g, "&quot;")
+				.replace(/'/g, "&#039;");
+		}
+		</script>
+	</body>
+</html>
