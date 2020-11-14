@@ -72,7 +72,7 @@ function getGames(callback) {
 }
 
 function getStreams(gameName, callback) {
-  request.open('GET', `${API}/streams?game=${encodeURIComponent(gameName)}`, true);
+  request.open('GET', `${API}/streams?game=${encodeURIComponent(gameName)}&limit=20`, true);
   request.setRequestHeader('Client-ID', CLIENT_ID);
   request.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json');
   request.onload = function () {
