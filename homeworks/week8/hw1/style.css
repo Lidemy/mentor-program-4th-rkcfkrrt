@@ -1,0 +1,261 @@
+.navbar {
+  background: rgb(255, 255, 255);
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+  padding: 0 24px;
+}
+
+.navbar .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  font-size: 18px;
+}
+
+.navbar__site-name {
+  font-size: 36px;
+  color: #489846;
+}
+
+.navbar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: 18px;
+}
+
+.navbar__list li {
+  margin-left: 24px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 0.1s ease-in;
+}
+
+.navbar__list li.active,
+.navbar__list li:hover {
+  background: #ff7286;
+}
+
+.navbar__list li.active a,
+.navbar__list li:hover a {
+  color: white;
+}
+.navbar__list li a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  margin: 0;
+}
+
+main {
+  background-image: url('games-bn.jpg');
+  background-size: auto;
+  height: 767px;
+}
+
+.windows {
+  display: inline-block;
+  margin: auto;
+  width: 500px;
+  height: 560px;
+  border-radius: 16px;
+  background-color: white;
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 24px;
+}
+
+.windows__title {
+  text-align: center;
+  color: #5ec1b6;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.windows__content {
+  margin: auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+.windows__list {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.windows__item {
+  font-weight: bold;
+  height: 18px;
+}
+
+.windows__text {
+  width: 319px;
+}
+
+.line {
+  border-bottom: dashed 1px #cdcdcd;
+  margin-bottom: 19px;
+}
+
+.btn {
+  background-color: #e62a45;
+  display: block;
+  width: 400px;
+  height: 55px;
+  margin: auto;
+  border-radius: 8px;
+  color: white;
+}
+
+.result {
+  height: 767px;
+  text-align: center;
+  display: block;
+  margin: auto;				
+}
+
+.jackpot {				
+  background-image: url('8-1-FIRST.jpg');
+  background-size: auto;
+  height: 767px;
+  text-align: center;
+  display: block;
+  margin: auto;					
+}
+
+.second {
+  background-image: url('8-1-SECOND.jpg');
+  background-size: auto;
+  height: 767px;
+  text-align: center;
+  display: block;
+  margin: auto;				
+}
+
+.third {
+  background-image: url('8-1-THIRD.jpg');
+  background-size: auto;
+  height: 767px;
+  text-align: center;
+  display: block;
+  margin: auto;				
+}
+
+.none {
+  background-color: black;
+  color: white;
+  height: 767px;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.none__text {
+  margin-bottom: 100px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.result__text {
+  padding-top: 190px;
+  margin-bottom: 55px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.footer__bottom {
+  background: #35564b;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.footer__top {
+  background: #e8efee;
+  padding: 32px;
+  color: #484848;
+}
+
+.footer__top .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info {
+  margin-right: 16px;
+}
+
+.footer__info div + div {
+  margin-top: 10px;
+}
+
+.footer__site {
+  font-size: 36px;
+  color: #489846;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 12px;
+}	
+
+@media(max-width: 768px) {
+  .navbar .wrapper {
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    padding-bottom: 30px;
+  }
+
+  .navbar__site-name {
+    margin-top: 10px;
+  }
+
+  .navbar__list {
+    display: flex;
+    width: 100%;
+  }
+
+  .navbar__list li {
+    flex: 1;
+    margin-left: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .windows {
+  margin: auto;
+  top: 80%;
+}
+
+  .btn {
+    width: auto;
+  }
+
+  .footer__top .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .footer__info {
+    margin-right: 0;
+    margin-top: 16px;
+  }
+}
