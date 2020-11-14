@@ -1,0 +1,132 @@
+*{ margin: 0; padding: 0;}
+    
+body {
+  background-image: url('8-2background.jpg');
+  font-family: monospace;
+}
+
+nav {
+  justify-content: space-between;
+  display: flex;
+  background-color: white;
+}
+
+.title {
+  margin: 20px;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  padding-top: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.info {
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.explain {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.game__chosen {
+  font-size: 36px;
+}
+
+.game__name {
+  text-align: center;
+  width: 140px;
+  padding: 25px 5px 15px;
+}
+
+.game__name:hover {
+  background-color: #8f8989;
+  color: white;
+}
+
+.streams {
+  width: 1120px;
+  margin: auto;
+}
+
+.channel {
+  width: 320px;
+  height: 270px;
+  background-color: #04060F;
+  color: white;
+  font-size: 18px;
+  line-height: 30px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.channel:hover {
+  transform: scale(1.12);
+  transition:width 1s, height 1s;
+}
+
+.channel__data {        
+  display: flex;
+}
+
+.channel__info {
+  width: 250px;
+}
+
+.channel__status,
+.channel__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.channel__logo {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.channel__status,
+.channel__name {
+  margin: 10px;
+}
+
+footer {
+  padding-bottom: 30px;
+}
+
+@media(max-width: 768px) {
+  nav {
+    width: 100vw;          
+  }
+
+  ul {
+    width: 30%;
+    padding: 10px 5px 5px;
+    background-color: white;
+  }
+
+  main {
+    width: 100vw;
+    margin: auto;
+  }
+
+  .streams {
+    width: 50vw;
+    margin: auto;
+  }
+
+}
