@@ -15,7 +15,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 $sql = sprintf(
-	"select * from users where username = '%s' and password = '%s'",
+	"select * from wendyl_board_users where username = '%s' and password = '%s'",
   $username,
   $password
 );

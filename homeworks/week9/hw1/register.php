@@ -1,11 +1,10 @@
 <?php
   require_once("conn.php");
 
-  $result = $conn->query("select * from comments order by id desc");
+  $result = $conn->query("select * from wendyl_board_comments order by id desc");
   if (!$result) {
     die('Error:' . $conn->error);
   }
-
 ?>
 
 <!DOCTYPE html>

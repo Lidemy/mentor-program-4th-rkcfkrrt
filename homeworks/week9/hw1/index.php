@@ -8,11 +8,10 @@
     $username = $_SESSION['username'];
   };
 
-  $result = $conn->query("select * from comments order by id desc");
+  $result = $conn->query("select * from wendyl_board_comments order by id desc");
   if (!$result) {
     die('Error:' . $conn->error);
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -75,8 +74,7 @@
             <div class="area__text"><?php echo $row['content']; ?></div>
           </div>
         </div>
-    <?php } ?>
-    
+    <?php } ?>    
   </section>
 </main>
 </body>

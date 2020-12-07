@@ -16,7 +16,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 $sql = sprintf(
-	"insert into users(nickname, username, password) values('%s', '%s', '%s')",
+	"insert into wendyl_board_users(nickname, username, password) values('%s', '%s', '%s')",
   $nickname,
   $username,
   $password

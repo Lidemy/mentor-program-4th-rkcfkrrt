@@ -12,7 +12,7 @@
   function getUserFromUsername ($username) {
     global $conn;
     $sql = sprintf(
-      "select username from users where username = '%s'",
+      "select username from wendyl_board_users where username = '%s'",
       $username
     );
     $result = $conn->query($sql);
@@ -20,13 +20,11 @@
     $username = $row['username'];
     
     $sql = sprintf(
-      "select * from users where username = '%s'",
+      "select * from wendyl_board_users where username = '%s'",
       $username
     );
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     return $row;
   }
-
 ?>
-

@@ -14,7 +14,7 @@ $user = getUserFromUsername($_SESSION['username']);
 $nickname = $user['nickname'];
 $content = $_POST['content'];
 $sql = sprintf(
-	"insert into comments(nickname, content) values('%s', '%s')",
+	"insert into wendyl_board_comments(nickname, content) values('%s', '%s')",
   $nickname,
   $content
 );
