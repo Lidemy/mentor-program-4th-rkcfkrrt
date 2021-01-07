@@ -29,6 +29,7 @@ if (password_verify($password, $row['password'])) {
   //成功
   $_SESSION['username'] = $username;
   header('Location: index.php');
+  exit();
 } else {
   header('Location: login.php?errCode=1');
   exit();

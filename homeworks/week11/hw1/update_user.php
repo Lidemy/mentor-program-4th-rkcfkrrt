@@ -27,4 +27,5 @@
     die('Error:' . $conn->error);
   }
   header('Location: index.php');
+  exit();
 ?>

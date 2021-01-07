@@ -11,6 +11,7 @@ $result = $stmt->execute();
 if ($result) {
   //成功
   header('Location: admin.php');
+  exit();
 } else {
   header('Location: admin.php?errCode=1');
   die();

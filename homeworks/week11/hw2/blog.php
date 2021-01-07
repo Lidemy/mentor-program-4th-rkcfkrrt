@@ -64,7 +64,7 @@ $row = $result->fetch_assoc();
           <?php } ?>
         </div>
         <div class="post__info">
-          <?php echo($row['created_at']);?>
+          <?php echo escape($row['created_at']);?>
         </div>
         <div class="blog__content"><?php echo(escape($row['content']));?></div>
       </article>

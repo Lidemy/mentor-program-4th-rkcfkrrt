@@ -15,18 +15,24 @@
     die('資料不齊全');
   };
 
-  //更新 account 類型
-  $account = $_POST['account'];
-  $id = $_POST['id'];
-  $stmt = $conn->prepare(
-    'UPDATE wendyl_board_users SET account = ? WHERE id = ?'
-  );
-  $stmt->bind_param('si', $account, $id);
-  $result = $stmt->execute();
+  //管理員可更新 account 類型
+  if ($user['account']=='admin') {
+    $account = $_POST['account'];
+    $id = $_POST['id'];
+    $stmt = $conn->prepare(
+      'UPDATE wendyl_board_users SET account = ? WHERE id = ?'
+    );
+    $stmt->bind_param('si', $account, $id);
+    $result = $stmt->execute();
+  } else {
+    header('Location: index.php?errCode=1');
+    die('無操作權限');
+  }
 
   if (!$result) {
     die('Error:' . $conn->error);
   }
 
   header('Location: back.php');
+  exit();
 ?>
