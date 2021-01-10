@@ -53,8 +53,8 @@
       }
     ?>
     <form class="add__new-form" method="POST" action="handle_update_comment.php">
-      <textarea class="add__text" name="content"><?php echo $row['content']?></textarea>
-      <input type="hidden" name="id" value="<?php echo(escape($row['id']));?>">
+      <textarea class="add__text" name="content"><?php echo escape($row['content'])?></textarea>
+      <input type="hidden" name="id" value="<?php echo escape($row['id']);?>">
       <input type="submit" value="提交" class="submit" />
     </form>
   </section>

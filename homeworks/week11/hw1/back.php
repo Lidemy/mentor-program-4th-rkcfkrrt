@@ -8,12 +8,13 @@
   if (!empty($_SESSION['username'])) {
     $username = $_SESSION['username'];
     $user = getUserFromUsername($username);
-    $account = getAccount ($username);
+    $account = $user['account'];
   };
 
   //確認是否管理員
   if ($account !== 'admin') {
     header('Location: index.php?errCode=2');
+    die('非管理員身份');
   }
 
   //分頁
