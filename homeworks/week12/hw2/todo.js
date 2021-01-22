@@ -188,7 +188,7 @@ $(document).ready(() => {
       $('.list-group').empty();
       for (let j = 0; j < todos.length; j += 1) {
         const li = addOne(todos[j].content);
-        if (todos[j].done === 1) {
+        if (todos[j].done === '1') {
           $(li).addClass('isChecked');
           $(li).find('input.done').val(1);
           $(li).find('input.form-check-checkbox').prop('checked', true);
