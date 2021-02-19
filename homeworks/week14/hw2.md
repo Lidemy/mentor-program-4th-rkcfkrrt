@@ -51,6 +51,7 @@
 >ubuntu@ip-xx:~$ `sudo apt install python-certbot-nginx`
 ……
 >E: Package 'python-certbot-nginx' has no installation candidate
+
 -> 改用較新的 python3 即可 `sudo apt-get install python3-certbot-nginx`
 其實錯誤提示有寫解法，但因為有點緊張它，以致於在查資料中過了一些時間才看到。
 
